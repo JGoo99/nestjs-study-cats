@@ -22,12 +22,4 @@ export class CatsController {
   createOne(@Body() createCatDto: CreateCatDto) {
     this.catsService.create(createCatDto);
   }
-
-  @Get(':id')
-  findOne(@Param('id', ParseIntPipe) id: number) {
-    return `cat ${id}`;
-  }
-
-  //   @Patch(':id')
-  //   updateOne(@Param('id', ParseIntPipe) id: number, @Body)
 }
