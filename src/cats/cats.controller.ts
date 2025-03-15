@@ -20,7 +20,6 @@ export class CatsController {
 
   @Post()
   createOne(@Body() createCatDto: CreateCatDto) {
-    console.log(`created ${createCatDto.name}, ${createCatDto.age}`);
     this.catsService.create(createCatDto);
   }
 
